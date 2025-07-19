@@ -1,0 +1,279 @@
+/* Existing styles */
+.Project_section {
+    flex: 1;
+    margin-left: 400px;
+    padding: 100px 60px 40px 60px;
+    background: url('../../assets/bg.jpg') center/cover no-repeat;
+    min-height: 100vh;
+    box-sizing: border-box;
+    color: white;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.h5 {
+    margin-top: 50px;
+    font-size: 32px;
+    font-weight: bold;
+    color: #ffffff;
+}
+
+.active {
+    width: 100px;
+    height: 8px;
+    background-color: #39965F;
+    border-radius: 5px;
+    margin: 10px 0 30px;
+}
+
+.projects {
+    width: 400px;
+    border: 1px solid #444;
+    border-radius: 10px;
+    padding: 12px;
+    background-color: rgba(27, 27, 27, 0.9);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.projects:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 20px rgba(0, 255, 128, 0.3);
+}
+
+.projects img {
+    width: 100%;
+    height: 230px;
+    border-radius: 10px;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.product_img {
+    position: relative;
+    overflow: hidden;
+}
+
+.product_img:hover img {
+    filter: brightness(60%);
+    transform: scale(1.05);
+}
+
+.asaxiy {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 34px;
+    color: white;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.product_img:hover .asaxiy {
+    opacity: 1;
+}
+
+.project_title {
+    font-size: 22px;
+    margin: 15px 0 10px;
+    color: #e6e6e6;
+    text-align: center;
+}
+
+.grean {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    justify-content: center;
+}
+
+.grean span {
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-size: 14px;
+    color: #39965F;
+    transition: background-color 0.3s;
+    cursor: pointer;
+}
+
+.grids {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    row-gap: 80px;
+    column-gap: 40px; /* Add some column gap for better spacing */
+    justify-items: center; /* Center grid items */
+}
+
+/* --- Responsive Styles --- */
+
+/* 1024px va undan kichik ekranlar uchun (masalan, planshetlar landscape rejimida) */
+@media (max-width: 1024px) {
+    .Project_section {
+        margin-left: 0; /* Yon paneldan bo'sh joyni olib tashlash */
+        padding: 80px 40px 30px 40px; /* Ichki bo'shliqni kamaytirish */
+    }
+
+    .h5 {
+        margin-top: 80px; /* Sarlavha yuqori marginini moslashtirish */
+        font-size: 30px;
+    }
+
+    .active {
+        width: 90px;
+        margin-bottom: 25px;
+    }
+
+    .grids {
+        grid-template-columns: 1fr; /* Loyihalar bitta ustunda joylashadi */
+        row-gap: 60px;
+        padding: 0 20px; /* Grids uchun ichki padding qo'shish */
+    }
+
+    .projects {
+        width: 100%; /* Loyiha kartochkalari to'liq kenglikni egallaydi */
+        max-width: 500px; /* Maksimal kenglikni belgilash (agar kerak bo'lsa) */
+        padding: 10px;
+    }
+
+    .projects img {
+        height: 200px; /* Rasmlarning balandligini kamaytirish */
+    }
+
+    .project_title {
+        font-size: 20px;
+        margin: 12px 0 8px;
+    }
+
+    .grean span {
+        padding: 5px 10px;
+        font-size: 13px;
+    }
+}
+
+/* 768px va undan kichik ekranlar uchun (masalan, planshetlar portrait rejimida, katta telefonlar) */
+@media (max-width: 768px) {
+    .Project_section {
+        padding: 60px 20px 20px 20px;
+    }
+
+    .h5 {
+        margin-top: 60px;
+        font-size: 28px;
+    }
+
+    .active {
+        width: 80px;
+        margin-bottom: 20px;
+    }
+
+    .grids {
+        row-gap: 40px;
+        padding: 0; /* Bu o'lchamda grids paddingini olib tashlash */
+    }
+
+    .projects {
+        padding: 8px;
+    }
+
+    .projects img {
+        height: 180px;
+    }
+
+    .asaxiy {
+        font-size: 30px;
+    }
+
+    .project_title {
+        font-size: 18px;
+        margin: 10px 0 6px;
+    }
+
+    .grean span {
+        padding: 4px 8px;
+        font-size: 12px;
+    }
+}
+
+/* 480px va undan kichik ekranlar uchun (aksariyat mobil telefonlar) */
+@media (max-width: 480px) {
+    .Project_section {
+        padding: 40px 15px 15px 15px;
+    }
+
+    .h5 {
+         margin-top: 40px;
+         font-size: 26px;
+    }
+
+    .active {
+        width: 70px;
+        height: 7px;
+        margin-bottom: 15px;
+    }
+
+    .projects {
+        padding: 6px;
+    }
+
+    .projects img {
+        height: 160px;
+    }
+
+    .asaxiy {
+        font-size: 28px;
+    }
+
+    .project_title {
+        font-size: 16px;
+        margin: 8px 0 5px;
+    }
+
+    .grean {
+        gap: 10px;
+    }
+
+    .grean span {
+        padding: 3px 7px;
+        font-size: 11px;
+    }
+}
+
+/* 350px va undan kichik ekranlar uchun (juda kichik telefonlar) */
+@media (max-width: 350px) {
+    .Project_section {
+        padding: 30px 10px 10px 10px;
+    }
+
+    .h5 {
+        margin-top: 30px;
+        font-size: 24px;
+    }
+
+    .active {
+        width: 60px;
+        height: 6px;
+        margin-bottom: 10px;
+    }
+
+    .projects img {
+        height: 140px;
+    }
+
+    .asaxiy {
+        font-size: 26px;
+    }
+
+    .project_title {
+        font-size: 15px;
+        margin: 6px 0 4px;
+    }
+
+    .grean {
+        gap: 8px;
+    }
+
+    .grean span {
+        padding: 2px 6px;
+        font-size: 10px;
+    }
+}

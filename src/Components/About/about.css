@@ -1,0 +1,356 @@
+.about_cont {
+  flex: 1;
+  margin-left: 400px;
+  padding: 100px 60px 40px 60px;
+  background: url('../../assets/bg.jpg') center/cover no-repeat;
+  min-height: 100vh;
+  position: relative;
+  box-sizing: border-box;
+}
+
+.toast {
+  position: fixed;
+  top: 50px;
+  right: 50px;
+  background: #39965F;
+  color: white;
+  padding: 15px 25px;
+  border-radius: 10px;
+  z-index: 100000000;
+  animation: slideIn 0.4s ease, fadeOut 0.4s ease 2.6s forwards;
+}
+
+.title { width: 80%; }
+.h2 { 
+  font-size: 30px;
+  margin-top: 130px;
+ }
+
+.activ {
+  width: 100px;
+  height: 10px;
+  border-radius: 5px;
+  background-color: #39965F;
+  margin-top: -15px;
+  margin-bottom: 20px;
+}
+
+.title p { opacity: 80%; }
+
+.boglanish {
+  width: 120px;
+  height: 40px;
+  background-color: #39965F;
+  border: none;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.boglanish:hover {
+  background-color: #2e7448;
+  transform: scale(1.05);
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+.html {
+  background-color: #1B1B1B;
+  width: 200px;
+  height: 130px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+  border: 1px solid rgb(97, 97, 97);
+  font-size: 50px;
+  transition: 0.3s;
+}
+
+.html:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 10px #39965F;
+}
+
+.html1 { color: rgb(255, 109, 93); }
+.css { color: rgb(86, 86, 253); }
+.js { color: yellow; }
+
+.menqilaolaman2 {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30px;
+}
+
+.card {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  max-width: 420px;
+  height: 110px;
+  background-color: #1B1B1B;
+  border-radius: 10px;
+  padding: 0 10px;
+  opacity: 0;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px) scale(1.03);
+  box-shadow: 0 0 15px #39965F80;
+}
+
+.icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 80px;
+  height: 70px;
+  font-size: 30px;
+  border-radius: 5px;
+  margin-left: 10px;
+}
+
+.icon1 { background-color: #5CB0FF40; }
+.icon2 { background-color: #333333; border: 1px solid; }
+.icon3 { background-color: #A5EAD640; }
+.icon4 { background-color: #00EE7A40; }
+
+.text_card {
+  height: 115px;
+  padding-left: 15px;
+}
+
+/* Fade from top */
+@keyframes fade-top {
+  0% {
+    opacity: -1;
+    transform: translateY(-100px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate.fade-top {
+  animation: fade-top 1s ease forwards;
+  opacity: 1 !important;
+}
+
+.mijozlar p {
+  font-size: 25px;
+  opacity: 20%;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+
+/* --- Responsiv Stylar --- */
+
+/* 1024px va undan kichik ekranlar uchun (masalan, planshetlar landscape rejimida) */
+@media (max-width: 1024px) {
+    .about_cont {
+        margin-left: 0; /* Yon paneldan bo'sh joyni olib tashlash */
+        padding: 80px 40px 30px 40px; /* Ichki bo'shliqni kamaytirish */
+    }
+
+    .toast {
+        right: 20px;
+        top: 20px;
+        padding: 12px 20px;
+        font-size: 14px;
+    }
+
+    .h2 {
+        margin-top: 100px;
+        font-size: 28px;
+    }
+
+    .title {
+        width: 100%; /* Sarlavha butun kenglikni egallashi */
+    }
+
+    .grid {
+        grid-template-columns: repeat(3, 1fr); /* Texnologiyalar 3 ustunda */
+        gap: 15px;
+    }
+
+    .html {
+        width: auto; /* Kenglikni gridga moslashtirish */
+        height: 110px;
+        font-size: 45px;
+    }
+
+    .menqilaolaman2 {
+        grid-template-columns: 1fr; /* Kartochkalar vertikal joylashadi */
+        gap: 20px;
+    }
+
+    .card {
+        max-width: 80%; /* Karta to'liq kenglikni egallaydi */
+        flex-direction: row; /* Kontentni bir qatorda saqlash */
+        align-items: center;
+        padding: 15px;
+        margin-left: 50px;
+    }
+
+    .icon {
+        width: 70px;
+        height: 60px;
+        font-size: 28px;
+        margin-left: 0;
+        margin-right: 15px; /* Belgicha va matn orasidagi bo'shliq */
+    }
+
+    .text_card {
+        padding-left: 0;
+    }
+}
+
+/* 768px va undan kichik ekranlar uchun (masalan, planshetlar portrait rejimida, katta telefonlar) */
+@media (max-width: 768px) {
+    .about_cont {
+        padding: 60px 20px 20px 20px;
+    }
+
+    .h2 {
+        margin-top: 80px;
+        font-size: 26px;
+    }
+
+    .grid {
+        grid-template-columns: repeat(2, 1fr); /* Texnologiyalar 2 ustunda */
+        gap: 10px;
+    }
+
+    .html {
+        height: 100px;
+        font-size: 40px;
+    }
+
+    .card {
+        flex-direction: column; /* Belgicha va matn vertikal joylashadi */
+        text-align: center;
+        padding: 20px 15px;
+        margin-left: 25px;
+    }
+
+    .icon {
+        margin-bottom: 15px; /* Belgicha va matn orasidagi bo'shliq */
+        margin-right: 0;
+        width: 50px;
+        height: 50px;
+    }
+
+    .text_card h2 {
+        margin-top: 0;
+        font-size: 1.2em;
+    }
+
+    .text_card p {
+        font-size: 0.9em;
+    }
+    .mijozlar{
+      margin-top: 30px;
+      margin-bottom: 30px;
+    }
+}
+
+/* 480px va undan kichik ekranlar uchun (aksariyat mobil telefonlar) */
+@media (max-width: 480px) {
+    .about_cont {
+        padding: 40px 15px 15px 15px;
+    }
+
+    .toast {
+        right: 10px;
+        top: 10px;
+        padding: 10px 15px;
+        font-size: 12px;
+    }
+
+    .h2 {
+        margin-top: 60px;
+        font-size: 24px;
+    }
+
+    .activ {
+        width: 80px;
+        height: 8px;
+    }
+
+    .title p {
+        font-size: 14px;
+    }
+
+    .boglanish {
+        width: 100px;
+        height: 35px;
+        font-size: 14px;
+    }
+
+    .grid {
+        grid-template-columns: 1fr; /* Texnologiyalar bitta ustunda */
+    }
+
+    .html {
+        height: 90px;
+        font-size: 35px;
+    }
+
+    .card {
+        padding: 15px;
+    }
+
+    .icon {
+        width: 50px;
+        height: 50px;
+        font-size: 20px;
+    }
+
+    .mijozlar p {
+        font-size: 20px;
+    }
+}
+
+/* 350px va undan kichik ekranlar uchun (juda kichik telefonlar) */
+@media (max-width: 350px) {
+    .about_cont {
+        padding: 30px 10px 10px 10px;
+    }
+
+    .h2 {
+        margin-top: 50px;
+        font-size: 22px;
+    }
+
+    .title p {
+        font-size: 13px;
+    }
+
+    .boglanish {
+        width: 90px;
+        height: 30px;
+        font-size: 13px;
+    }
+
+    .html {
+        height: 80px;
+        font-size: 30px;
+    }
+
+    .card {
+        padding: 10px;
+    }
+
+    .icon {
+        width: 45px;
+        height: 45px;
+        font-size: 18px;
+    }
+}

@@ -1,0 +1,252 @@
+/* Umumiy Header */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 70px;
+    background-color: #0f0f0f;
+    color: white;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 10000;
+    border-bottom: 1px solid #444;
+    padding: 0 30px;
+    box-sizing: border-box;
+    animation: fadeDown 1s ease;
+}
+
+/* Logo qismi */
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 22px;
+    font-weight: 600;
+}
+
+.logospan {
+    color: #39965F;
+}
+
+/* Navigatsiya */
+nav {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+/* Navigatsiya ro'yxati */
+nav ul {
+    display: flex;
+    gap: 25px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+/* Har bir link */
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 500;
+    padding: 5px 0;
+    position: relative;
+    transition: all 0.3s ease;
+}
+
+/* Pastki chiziq animatsiyasi */
+nav ul li a::after {
+    content: '';
+    position: absolute;
+    width: 0%;
+    height: 2px;
+    background: #39965F;
+    left: 0;
+    bottom: 0;
+    transition: width 0.3s ease;
+}
+
+nav ul li a:hover::after {
+    width: 100%;
+}
+
+nav ul li a:hover {
+    color: #39965F;
+}
+
+/* Faollashtirilgan link */
+nav ul li.activy a {
+    color: #39965F;
+}
+
+nav ul li.activy a::after {
+    width: 100%;
+}
+
+/* GitHub ikonkasi */
+.github {
+    font-size: 24px;
+    color: white;
+    transition: color 0.3s ease;
+}
+
+.github:hover {
+    color: #39965F;
+}
+
+/* Hamburger menyu ikonasi */
+.menu-icon {
+    display: none; /* Desktopda yashiramiz */
+    font-size: 28px;
+    cursor: pointer;
+    color: white;
+    z-index: 1002; /* Overlaydan va menyudan yuqorida turishi uchun */
+    transition: transform 0.3s ease;
+}
+
+/* Menyuni ochilganda orqa fonni qoplaydigan va blur qiladigan overlay */
+.menu-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6); /* Yengil qoraygan fon */
+    backdrop-filter: blur(5px); /* Orqa fonni blur qilish */
+    z-index: 1000; /* Header va menyu orasida turishi uchun */
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.4s ease-in-out, visibility 0.4s ease-in-out;
+}
+
+/* Mobil menyu ochiq bo'lganda overlayni ko'rsatish */
+nav.nav-open + .menu-overlay { /* nav-open klassiga ega navdan keyingi overlayni tanlaydi */
+    opacity: 1;
+    visibility: visible;
+}
+
+.sidebar{
+    display: none;
+}
+
+/* Responsiv holat: 1024px va undan kichik ekranlar uchun */
+@media (max-width: 1024px) {
+    header {
+        padding: 0 20px;
+    }
+
+    nav {
+        /* Mobil menyu yopiq holati */
+        position: fixed;
+        top: 0;
+        right: -100%; /* Ekrandan tashqarida yashiramiz */
+        width: 100%; /* Mobil menyu butun ekranni qoplaydi */
+        max-width: none; /* Maksimal kenglikni olib tashlaymiz */
+        height: 100vh;
+        background-color: #0f0f0f; /* Mobil menyu foni */
+        flex-direction: column;
+        justify-content: center; /* Kontentni markazga joylash */
+        align-items: center;
+        padding-top: 0;
+        transition: right 0.4s ease-in-out; /* Ochilish/yopilish animatsiyasi */
+        box-shadow: none; /* Mobil menyuda box-shadow shart emas */
+    }
+
+    /* Mobil menyu ochiq holati */
+    nav.nav-open {
+        right: 0; /* Ekran ichiga olib kelamiz */
+    }
+
+    nav ul.nav-links {
+        flex-direction: column;
+        align-items: center; /* Linklarni markazga joylash */
+        gap: 30px; /* Bo'shliqni oshiramiz */
+        width: 100%;
+        padding: 0; /* Paddingni olib tashlaymgy */
+        margin-bottom: 40px; /* GitHub ikonkasidan biroz bo'shliq */
+    }
+
+    nav ul li {
+        width: auto; /* Kenglikni avtomatik sozlash */
+    }
+
+    nav ul li a {
+        font-size: 24px; /* Kattaroq shrift o'lchami */
+        padding: 10px 0;
+        text-align: center;
+    }
+
+    nav ul li a::after {
+        left: 50%; /* Pastki chiziq markazdan boshlanishi uchun */
+        transform: translateX(-50%); /* Markazga tortish */
+    }
+
+    nav ul li a:hover::after {
+        width: 100%; /* Hoverda to'liq kengayishi */
+    }
+
+    .github {
+        font-size: 36px; /* Katta GitHub ikonka */
+        margin-top: 0;
+    }
+
+    .menu-icon {
+        display: block; /* Mobil qurilmalarda ko'rsatamiz */
+    }
+    .sidebar{
+        display: block;
+    }
+}
+
+/* Responsiv holat: 768px va undan kichik ekranlar uchun */
+@media (max-width: 768px) {
+    .logo {
+        font-size: 20px;
+    }
+
+    nav ul li a {
+        font-size: 22px;
+    }
+
+    .github {
+        font-size: 32px;
+    }
+}
+
+/* Responsiv holat: 480px va undan kichik ekranlar uchun */
+@media (max-width: 480px) {
+    header {
+        padding: 0 15px;
+    }
+
+    .logo {
+        font-size: 18px;
+    }
+
+    .menu-icon {
+        font-size: 24px;
+    }
+
+    nav ul li a {
+        font-size: 20px;
+    }
+
+    .github {
+        font-size: 28px;
+    }
+}
+
+/* AOS-like qo‘shimcha fallback animatsiya */
+@keyframes fadeDown {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

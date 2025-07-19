@@ -1,0 +1,141 @@
+/* Umumiy sozlamalar */
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+  overflow-x: hidden;
+  color: #fff;
+}
+
+/* Head konteyner */
+.head_cont {
+  flex: 1;
+  margin-left: 400px;
+  padding: 100px 60px 40px 60px;
+  background: url('../../assets/bg.jpg') center/cover no-repeat;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  box-sizing: border-box;
+}
+
+/* Ichki kontent */
+.head {
+  max-width: 700px;
+  opacity: 0;
+  transform: translateY(-50px);
+}
+
+/* Scroll animatsiya qo‘shiladi */
+.animate.fade-top {
+  animation: fadeTop 1s ease forwards;
+}
+
+@keyframes fadeTop {
+  0% {
+    opacity: 0;
+    transform: translateY(-50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Sarlavha */
+.head h2 {
+  font-size: 36px;
+  line-height: 1.4;
+  margin-bottom: 20px;
+}
+
+.head .gren {
+  color: #00ff99;
+}
+
+/* Matn */
+.head p {
+  font-size: 18px;
+  line-height: 1.6;
+  margin-bottom: 30px;
+}
+
+/* Tugma */
+.head .btn {
+  background-color: #00ff99;
+  color: #000;
+  border: none;
+  padding: 12px 30px;
+  font-size: 16px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: 0.3s ease;
+  width: fit-content;
+}
+
+.head .btn:hover {
+  background-color: #00cc77;
+  transform: scale(1.05);
+}
+
+/* Responsivlik */
+@media (max-width: 1024px) {
+  .head_cont {
+    margin-left: 0;
+    padding: 100px 30px 40px 30px;
+  }
+
+  .head h2 {
+    font-size: 28px;
+  }
+
+  .head p {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 768px) {
+  .head_cont {
+    padding: 80px 20px 40px 20px;
+    background-position: center;
+    background-size: cover;
+  }
+
+  .head h2 {
+    font-size: 24px;
+    line-height: 1.3;
+  }
+
+  .head p {
+    font-size: 15px;
+    line-height: 1.5;
+  }
+
+  .head .btn {
+    font-size: 14px;
+    padding: 10px 24px;
+  }
+}
+
+@media (max-width: 480px) {
+  .head_cont {
+    padding: 60px 15px 30px 15px;
+  }
+
+  .head h2 {
+    font-size: 20px;
+  }
+
+  .head p {
+    font-size: 14px;
+  }
+
+  .head .btn {
+    font-size: 13px;
+    padding: 8px 20px;
+  }
+}
+

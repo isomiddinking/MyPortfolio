@@ -1,0 +1,504 @@
+/* Existing styles */
+.contact {
+    flex: 1;
+    margin-left: 400px;
+    padding: 100px 60px 40px 60px;
+    background: url('../../assets/bg.jpg') center/cover no-repeat;
+    min-height: 100vh;
+    box-sizing: border-box;
+    color: #f1f1f1;
+}
+
+.h5 {
+    margin-top: 50px;
+    font-size: 32px;
+    font-weight: bold;
+    color: #ffffff;
+}
+
+.active {
+    width: 100px;
+    height: 8px;
+    background-color: #39965F;
+    border-radius: 5px;
+    margin: 10px 0 30px;
+}
+
+.contact_grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    justify-items: center; /* Grid ichidagi kartochkalarni markazga joylash */
+    margin-bottom: 80px; /* Formadan oldinroq bo'sh joy qo'shish */
+}
+
+.cards {
+    background-color: #1B1B1B;
+    border-radius: 12px;
+    width: 250px;
+    height: 190px;
+    text-align: center;
+    border: 1px solid #3c3c3c;
+    box-shadow: 0 0 0 transparent;
+    transition: 0.3s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.cards:hover {
+    transform: scale(1.02);
+    box-shadow: 0 0 15px #39965F50;
+}
+
+.cards span {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 32px;
+    width: 50px;
+    height: 50px;
+    border-radius: 5px;
+    margin-bottom: 15px;
+    color: white;
+}
+
+.instagram span {
+    background: linear-gradient(45deg, #feda75, #fa7e1e, #d62976, #962fbf, #4f5bd5);
+}
+
+.telegram span {
+    background-color: #1e96c8a1;
+}
+
+.phone span {
+    background-color: #39965Fa1;
+}
+
+.blocks h3 {
+    margin: 10px 0 5px;
+    font-size: 20px;
+    color: #ffffff;
+}
+
+.blocks a,
+.blocks p {
+    font-size: 16px;
+    color: #ccc;
+    opacity: 0.8;
+    text-decoration: none;
+}
+
+.blocks a:hover {
+    color: #39965F;
+    text-decoration: underline;
+}
+
+.form_section {
+    background-color: #1B1B1B;
+    padding: 40px;
+    border-radius: 10px;
+    color: white;
+    border: 1px solid #3c3c3c; /* Border rangini moslashtirish */
+    margin-bottom: 40px; /* Sahifaning pastida bo'sh joy qoldirish */
+}
+
+.form_line {
+    width: 100px;
+    height: 5px;
+    background-color: #22c55e;
+    margin-top: 10px;
+    margin-bottom: 30px;
+    border-radius: 5px;
+}
+
+.form_box {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.input_group {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.form_input {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.form_input label {
+    margin-bottom: 5px;
+    font-size: 15px;
+    color: #cccccc;
+}
+
+.form_input input {
+    padding: 12px;
+    background-color: #1f1f1f;
+    border: 1px solid #555; /* Input border qo'shish */
+    border-radius: 6px;
+    color: white;
+    font-size: 16px;
+}
+
+.form_input input::placeholder {
+    color: #888;
+    opacity: 0.7;
+}
+
+.email_wrapper {
+    display: flex;
+    gap: 8px; /* Input va select orasidagi bo'shliq */
+}
+
+.email_wrapper input {
+    flex: 1;
+    margin-right: 0; /* O'chirildi, gap qo'llaniladi */
+}
+
+.email_type {
+    background-color: #1f1f1f;
+    border: 1px solid #555; /* Select border qo'shish */
+    border-radius: 6px;
+    color: white;
+    padding: 12px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.email_type option {
+    background-color: #1f1f1f;
+    color: white;
+}
+
+.form_textarea label {
+    margin-bottom: 5px;
+    font-size: 15px;
+    color: #cccccc;
+}
+
+.form_textarea textarea {
+    width: 100%;
+    height: 150px;
+    padding: 12px;
+    border: 1px solid #555; /* Textarea border qo'shish */
+    border-radius: 6px;
+    background-color: #1f1f1f;
+    color: white;
+    resize: vertical; /* Faqat vertikal resize qilishga ruxsat berish */
+    font-size: 16px;
+}
+
+.form_textarea textarea::placeholder {
+    color: #888;
+    opacity: 0.7;
+}
+
+.form_btn {
+    background-color: #22c55e;
+    color: white;
+    width: 150px; /* Kenglikni biroz kattalashtirish */
+    height: 45px; /* Balandlikni kattalashtirish */
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 17px; /* Shrift o'lchamini kattalashtirish */
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.form_btn:hover {
+    background-color: #16a34a;
+    transform: translateY(-2px); /* Hoverda biroz ko'tarish */
+}
+
+
+/* --- Responsive Styles --- */
+
+/* 1024px va undan kichik ekranlar uchun (masalan, planshetlar landscape rejimida) */
+@media (max-width: 1024px) {
+    .contact {
+        margin-left: 0; /* Yon paneldan bo'sh joyni olib tashlash */
+        padding: 80px 40px 30px 40px; /* Ichki bo'shliqni kamaytirish */
+    }
+
+    .h5 {
+        margin-top: 80px;
+        font-size: 30px;
+    }
+
+    .active {
+        width: 90px;
+        margin-bottom: 25px;
+    }
+
+    .contact_grid {
+        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); /* Kartochkalarni moslashuvchan qilish */
+        gap: 25px;
+        margin-bottom: 60px;
+    }
+
+    .cards {
+        width: 100%; /* Kartochkalar to'liq kenglikni egallaydi */
+        max-width: 280px; /* Maksimal kenglikni belgilash */
+        height: 180px;
+        padding: 15px;
+    }
+
+    .cards span {
+        font-size: 30px;
+        width: 48px;
+        height: 48px;
+        margin-bottom: 12px;
+    }
+
+    .blocks h3 {
+        font-size: 18px;
+    }
+
+    .blocks a,
+    .blocks p {
+        font-size: 15px;
+    }
+
+    .form_section {
+        padding: 30px;
+    }
+
+    .form_line {
+        width: 90px;
+        margin-bottom: 25px;
+    }
+
+    .input_group {
+        flex-direction: column; /* Inputlarni vertikal joylashtirish */
+        gap: 15px;
+    }
+
+    .form_input {
+        flex: auto; /* Flex o'sishini avtomatik qilish */
+    }
+
+    .email_wrapper {
+        flex-direction: column; /* Email input va selectni vertikal joylashtirish */
+        gap: 10px;
+    }
+
+    .email_wrapper input {
+        margin-right: 0;
+    }
+}
+
+/* 768px va undan kichik ekranlar uchun (masalan, planshetlar portrait rejimida, katta telefonlar) */
+@media (max-width: 768px) {
+    .contact {
+        padding: 60px 20px 20px 20px;
+    }
+
+    .h5 {
+        margin-top: 60px;
+        font-size: 28px;
+    }
+
+    .active {
+        width: 80px;
+        margin-bottom: 20px;
+    }
+
+    .contact_grid {
+        grid-template-columns: 1fr; /* Kartochkalar bitta ustunda joylashadi */
+        gap: 20px;
+        margin-bottom: 40px;
+    }
+
+    .cards {
+        max-width: 300px; /* Kichikroq maksimal kenglik */
+        height: 170px;
+        padding: 12px;
+    }
+
+    .cards span {
+        font-size: 28px;
+        width: 45px;
+        height: 45px;
+        margin-bottom: 10px;
+    }
+
+    .blocks h3 {
+        font-size: 17px;
+    }
+
+    .blocks a,
+    .blocks p {
+        font-size: 14px;
+    }
+
+    .form_section {
+        padding: 25px;
+    }
+
+    .form_line {
+        width: 80px;
+        margin-bottom: 20px;
+    }
+
+    .form_input input,
+    .email_type,
+    .form_textarea textarea {
+        padding: 10px;
+        font-size: 15px;
+    }
+
+    .form_btn {
+        width: 140px;
+        height: 42px;
+        font-size: 16px;
+    }
+}
+
+/* 480px va undan kichik ekranlar uchun (aksariyat mobil telefonlar) */
+@media (max-width: 480px) {
+    .contact {
+        padding: 40px 15px 15px 15px;
+    }
+
+    .h5 {
+        margin-top: 40px;
+        font-size: 26px;
+    }
+
+    .active {
+        width: 70px;
+        height: 7px;
+        margin-bottom: 15px;
+    }
+
+    .contact_grid {
+        gap: 15px;
+        margin-bottom: 30px;
+    }
+
+    .cards {
+        height: 160px;
+        padding: 10px;
+    }
+
+    .cards span {
+        font-size: 26px;
+        width: 42px;
+        height: 42px;
+        margin-bottom: 8px;
+    }
+
+    .blocks h3 {
+        font-size: 16px;
+    }
+
+    .blocks a,
+    .blocks p {
+        font-size: 13px;
+    }
+
+    .form_section {
+        padding: 20px;
+    }
+
+    .form_line {
+        width: 70px;
+        margin-bottom: 15px;
+    }
+
+    .form_input label,
+    .form_textarea label {
+        font-size: 14px;
+    }
+
+    .form_input input,
+    .email_type,
+    .form_textarea textarea {
+        padding: 8px;
+        font-size: 14px;
+    }
+
+    .form_btn {
+        width: 130px;
+        height: 40px;
+        font-size: 15px;
+    }
+}
+
+/* 350px va undan kichik ekranlar uchun (juda kichik telefonlar) */
+@media (max-width: 350px) {
+    .contact {
+        padding: 30px 10px 10px 10px;
+    }
+
+    .h5 {
+        margin-top: 30px;
+        font-size: 24px;
+    }
+
+    .active {
+        width: 60px;
+        height: 6px;
+        margin-bottom: 10px;
+    }
+
+    .contact_grid {
+        gap: 10px;
+        margin-bottom: 25px;
+    }
+
+    .cards {
+        height: 150px;
+        padding: 8px;
+    }
+
+    .cards span {
+        font-size: 24px;
+        width: 40px;
+        height: 40px;
+        margin-bottom: 6px;
+    }
+
+    .blocks h3 {
+        font-size: 15px;
+    }
+
+    .blocks a,
+    .blocks p {
+        font-size: 12px;
+    }
+
+    .form_section {
+        padding: 15px;
+    }
+
+    .form_line {
+        width: 60px;
+        margin-bottom: 10px;
+    }
+
+    .form_input label,
+    .form_textarea label {
+        font-size: 13px;
+    }
+
+    .form_input input,
+    .email_type,
+    .form_textarea textarea {
+        padding: 7px;
+        font-size: 13px;
+    }
+
+    .form_btn {
+        width: 120px;
+        height: 38px;
+        font-size: 14px;
+    }
+}

@@ -1,0 +1,21 @@
+/* Scrollbar eni */
+::-webkit-scrollbar {
+  width: 1px;         /* vertical scroll uchun */
+  height: 1px;        /* horizontal scroll uchun */
+}
+
+/* Track (orqa fon) */
+::-webkit-scrollbar-track {
+  background: #000000;
+}
+
+/* Thumb (harakatlanuvchi scroll "tugmasi") */
+::-webkit-scrollbar-thumb {
+  background-color: #000000;
+  border-radius: 10px;
+}
+
+/* Hover qilinganda thumb */
+::-webkit-scrollbar-thumb:hover {
+  background-color: #555;
+}

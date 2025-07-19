@@ -1,0 +1,162 @@
+.myAbout {
+  position: fixed;
+  top: 55%;
+  left: 0;
+  transform: translateY(-50%) translateX(-100px); /* boshlanish holat */
+  background-color: #0F0F0F;
+  color: #f1f1f1;
+  width: 360px;
+  height: auto;
+  padding: 20px;
+  box-shadow: -5px 5px 15px rgba(0, 0, 0, 0.6);
+  z-index: 1000;
+  font-family: 'Segoe UI', sans-serif;
+  max-height: 85.4vh;
+  opacity: 0; /* animatsiya uchun */
+}
+
+/* Scroll animatsiya */
+.animate.slide-left {
+  animation: slideFromLeft 1s ease forwards;
+}
+
+@keyframes slideFromLeft {
+  from {
+    opacity: 0;
+    transform: translateY(-50%) translateX(-100px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(-50%) translateX(0);
+  }
+}
+
+/* Qolgan stylinglar o‘zgarishsiz */
+.myAbout::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: -1px;
+  width: 2px;
+  height: 100%;
+  background: linear-gradient(to bottom, #ffffff30, #ffffff00);
+}
+
+.Myimgs img {
+  width: 100%;
+  height: auto;
+  margin: 0 auto;
+  display: block;
+  border-radius: 5px;
+}
+
+.myTitle {
+  margin-top: 10px;
+  border-bottom: 1px solid white;
+  padding-bottom: 15px;
+}
+
+.myTitle h2 {
+  font-size: 22px;
+}
+
+.btn_box {
+  display: flex;
+}
+
+.mytitle_btn {
+  background-color: #1f1f1f;
+  color: #f1f1f1;
+  border-radius: 10px;
+  width: 100px;
+  border: none;
+  height: 40px;
+  margin: 6px 4px;
+  font-size: 13px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.mySocialmedia {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  max-width: 360px;
+  background-color: #111;
+  padding: 15px;
+  border-radius: 12px;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.gmail {
+  display: flex;
+  align-items: center;
+  background-color: #1f1f1f;
+  border-radius: 10px;
+  padding: 10px 14px;
+  gap: 14px;
+  color: #f1f1f1;
+  transition: background-color 0.3s;
+}
+
+.gmail h3 {
+  margin: 0;
+  font-size: 15px;
+  font-weight: 500;
+  color: #ccc;
+  line-height: 1.2;
+}
+
+.gmail:hover {
+  background-color: #2a2a2a;
+}
+
+.gamil_icon,
+.gitgub_icon,
+.telegram_icon,
+.phone_icon {
+  width: 42px;
+  height: 42px;
+  min-width: 42px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+  color: white;
+}
+
+.gamil_icon {
+  background: linear-gradient(to right, #d93025, #ea4335);
+}
+
+.gitgub_icon {
+  background-color: #333;
+}
+
+.telegram_icon {
+  background-color: #0088cc;
+}
+
+.phone_icon {
+  background-color: #0f9d58;
+}
+
+.social {
+  display: block;
+  font-size: 14px;
+  color: #fff;
+  text-decoration: none;
+  margin-top: 3px;
+  word-break: break-word;
+}
+
+.social:hover {
+  text-decoration: underline;
+}
+
+@media (max-width:1024px) {
+  .myAbout{
+    display: none;
+  }
+}
