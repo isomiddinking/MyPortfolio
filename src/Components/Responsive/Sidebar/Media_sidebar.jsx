@@ -6,6 +6,7 @@ import { FaGithub } from "react-icons/fa";
 import { BiLogoGmail } from "react-icons/bi";
 import AOS from 'aos';
 import 'aos/dist/aos.css';
+import myImg from '../../../assets/myImg.jpg'
 
 const Media_sidebar = () => {
 
@@ -33,7 +34,7 @@ function handleClick() {
 
       <div className="mysidebar">
         <div className="img_box_sidebar" data-aos="zoom-in">
-          <img src="/src/assets/myImg.jpg" alt="My profile" />
+          <img src={myImg} alt="My profile" />
         </div>
 
         <div className="title_box" data-aos="fade-down">

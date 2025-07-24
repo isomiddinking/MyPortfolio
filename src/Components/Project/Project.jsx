@@ -3,6 +3,10 @@ import './project.css';
 import { FaLink } from "react-icons/fa";
 import AOS from 'aos';
 import 'aos/dist/aos.css';
+import asaxiy from '../../assets/asaxiy.png'
+import vcCode from '../../assets/vcCodexClonr.png'
+import car from '../../assets/car.png'
+import orbita from '../../assets/orbita.png'
 
 const Project = () => {
   useEffect(() => {
@@ -17,7 +21,7 @@ const Project = () => {
 
       <div className="projects" data-aos="fade-up">
         <div className="product_img">
-          <img src="/src/assets/asaxiy.png" alt="asaxiy-uz" />
+          <img src={asaxiy} alt="asaxiy-uz" />
           <a
             href="https://asaxiy-uz-main-original-og01x0d2p-isomiddins-projects-3558bf11.vercel.app/"
             className='asaxiy'
@@ -38,7 +42,7 @@ const Project = () => {
 
          <div className="projects" data-aos="fade-up">
         <div className="product_img">
-          <img src="/src/assets/vcCodexClonr.png" alt="asaxiy-uz" />
+          <img src={vcCode} alt="asaxiy-uz" />
           <a
             href="https://vc-code-clon.vercel.app/"
             className='asaxiy'
@@ -59,7 +63,7 @@ const Project = () => {
 
         <div className="projects top  " data-aos="fade-up">
         <div className="product_img">
-          <img src="/src/assets/car.png" alt="asaxiy-uz" />
+          <img src={car} alt="asaxiy-uz" />
           <a
             href="https://car-rental-landing-page-udyj.vercel.app/"
             className='asaxiy'
@@ -80,7 +84,7 @@ const Project = () => {
 
   <div className="projects top  " data-aos="fade-up">
         <div className="product_img">
-          <img src="/src/assets/orbita.png" alt="asaxiy-uz" />
+          <img src={orbita} alt="asaxiy-uz" />
           <a
             href="https://quyosh-orbita-animation.vercel.app/"
             className='asaxiy'

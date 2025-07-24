@@ -2,6 +2,7 @@ import React, { useEffect, useRef } from 'react'
 import { FaPhone } from "react-icons/fa6";
 import { FaTelegramPlane } from "react-icons/fa";
 import { FaGithub } from "react-icons/fa";
+import myImg2 from '../../assets/myImg.jpg'
 
 import './sidebar.css'
 
@@ -26,7 +27,7 @@ const Sidebar = () => {
     <div ref={sidebarRef} className="myAbout">
       <div className="My_title">
         <div className="Myimgs">
-          <img src="/src/assets/myImg.jpg" alt="Isomiddin" />
+          <img src={myImg2} alt="Isomiddin" />
         </div>
 
         <div className="myTitle">

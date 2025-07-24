@@ -156,6 +156,10 @@
   .sidebar_page {
     padding: 60px 20px;
     display: block;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
   }
 
   .img_box_sidebar {
