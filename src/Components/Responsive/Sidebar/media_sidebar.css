@@ -4,12 +4,12 @@
   padding: 80px 40px 40px 40px;
   background: url('../../../assets/bg.jpg') center/cover no-repeat;
   height: 120vh;
+  overflow-y: hidden;
   position: relative;
   box-sizing: border-box;
   display: flex;
   justify-content: center;
   display: none;
-  overflow-y: hidden;
 }
 
 /* Sidebar qutisi */
