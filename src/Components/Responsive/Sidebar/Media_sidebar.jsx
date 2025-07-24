@@ -37,7 +37,7 @@ function handleClick() {
           <img src={myImg} alt="My profile" />
         </div>
 
-        <div className="title_box" data-aos="fade-down">
+        <div className="title_box" data-aos="fade-up">
           <h2>Isomiddin Xakimdjanov</h2>
           <div className="btn_box1" data-aos="fade-up">
             <button className="mytitle_btn1">Veb dasturchi</button>
