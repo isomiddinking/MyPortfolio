@@ -1,3 +1,7 @@
+body{
+  overflow-x: hidden;
+}
+
 /* Scrollbar eni */
 ::-webkit-scrollbar {
   width: 1px;         /* vertical scroll uchun */

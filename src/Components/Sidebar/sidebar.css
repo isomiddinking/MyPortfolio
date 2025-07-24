@@ -45,17 +45,19 @@
 }
 
 .Myimgs img {
-  width: 100%;
-  height: auto;
+  width: 60%;
+  height:  200px;
   margin: 0 auto;
   display: block;
   border-radius: 5px;
+  border-radius: 50%;
 }
 
 .myTitle {
   margin-top: 10px;
   border-bottom: 1px solid white;
-  padding-bottom: 15px;
+  padding-bottom: 0px;
+  text-align: center;
 }
 
 .myTitle h2 {
