@@ -46,7 +46,7 @@ function handleClick() {
           </div>
         </div>
 
-        <div className="mySocialmedia2" data-aos="fade-up">
+        <div className="mySocialmedia2" data-aos="fade-down">
           <div className="gmail2">
             <div className="gmail_icon"><BiLogoGmail /></div>
             <div className="social_block1">
