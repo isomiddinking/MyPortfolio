@@ -6,7 +6,7 @@
   background-color: #0F0F0F;
   color: #f1f1f1;
   width: 360px;
-  height: auto;
+  height: 100vh;
   padding: 20px;
   box-shadow: -5px 5px 15px rgba(0, 0, 0, 0.6);
   z-index: 1000;
