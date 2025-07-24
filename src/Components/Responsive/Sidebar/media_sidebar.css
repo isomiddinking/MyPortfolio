@@ -9,6 +9,7 @@
   display: flex;
   justify-content: center;
   display: none;
+  overflow-y: hidden;
 }
 
 /* Sidebar qutisi */
